@@ -243,7 +243,7 @@
     <nav class="navbar navbar-expand-lg bg-light py-1 ">
         
             <a class="navbar-brand" href="index.php">
-                <img src="http://localhost/siteweb/Files/logo.jpg" alt="Logo" style="height: 60px; width: 70px; margin-left: 5rem;">
+                <img src="logo.jpg" alt="Logo" style="height: 60px; width: 70px; margin-left: 5rem;">
             </a>
     
             <!-- <div class="d-flex flex-grow-1 justify-content-center">
@@ -271,15 +271,15 @@
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="http://localhost/siteweb/Files/gettyimages-522967072-612x612.jpg" class="d-block w-100"
+                                <img src="gettyimages-522967072-612x612.jpg" class="d-block w-100"
                                     alt="Image 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="http://localhost/siteweb/Files/téléchargement (15).jpeg" class="d-block w-100"
+                                <img src="téléchargement (15).jpeg" class="d-block w-100"
                                     alt="Image 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="http://localhost/siteweb/Files/gettyimages-2175614675-612x612.jpg"
+                                <img src="gettyimages-2175614675-612x612.jpg"
                                     class="d-block w-100" alt="Image 3">
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                             <!-- <div class="row" id="products"></div> -->
                                 <div class="col-md-4 mb-4">
                                     <div class="card product-card">
-                                        <img src="http://localhost/siteweb/Files/images (11).jpeg" alt="Produit 1"
+                                        <img src="images (11).jpeg" alt="Produit 1"
                                             class="card-img-top img-fluid">
                                         <div class="card-body">
                                             <h5 class="card-title">Produit 1</h5>
@@ -328,7 +328,7 @@
             
                                 <div class="col-md-4">
                                     <div class="card product-card">
-                                        <img src="http://localhost/siteweb/Files/images (12).jpeg" class="card-img-top img-fluid"
+                                        <img src="images (12).jpeg" class="card-img-top img-fluid"
                                             alt="Produit 2">
                                         <div class="card-body">
                                             <h5 class="card-title">Produit 2</h5>
@@ -339,7 +339,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card product-card">
-                                        <img src="http://localhost/siteweb/Files/images (13).jpeg" class="card-img-top img-fluid"
+                                        <img src="images (13).jpeg" class="card-img-top img-fluid"
                                             alt="Produit 3">
                                         <div class="card-body">
                                             <h5 class="card-title">Produit 3</h5>
@@ -451,7 +451,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card product-card">
-                        <img src="http://localhost/siteweb/Files/images (17).jpeg" class="card-img-top img-fluid" alt="Produit 5">
+                        <img src="images (17).jpeg" class="card-img-top img-fluid" alt="Produit 5">
                         <div class="card-body">
                             <h5 class="card-title">Produit 5</h5>
                             <p class="card-text">Description du produit 5.</p>
@@ -461,7 +461,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card product-card">
-                        <img src="http://localhost/siteweb/Files/images (18).jpeg" class="card-img-top img-fluid" alt="Produit 6">
+                        <img src="images (18).jpeg" class="card-img-top img-fluid" alt="Produit 6">
                         <div class="card-body">
                             <h5 class="card-title">Produit 6</h5>
                             <p class="card-text">Description du produit 6.</p>
@@ -471,7 +471,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                   <div class="card product-card">
-                      <img src="http://localhost/siteweb/Files/images (14).jpeg" class="card-img-top img-fluid" alt="Produit 4">
+                      <img src="images (14).jpeg" class="card-img-top img-fluid" alt="Produit 4">
                       <div class="card-body">
                           <h5 class="card-title">Produit 4</h5>
                           <p class="card-text">Description du produit 4.</p>
@@ -481,7 +481,7 @@
               </div>
               <div class="col-md-4 mb-4">
                   <div class="card product-card">
-                      <img src="http://localhost/siteweb/Files/images (15).jpeg" class="card-img-top img-fluid" alt="Produit 5">
+                      <img src="images (15).jpeg" class="card-img-top img-fluid" alt="Produit 5">
                       <div class="card-body">
                           <h5 class="card-title">Produit 5</h5>
                           <p class="card-text">Description du produit 5.</p>
@@ -491,7 +491,7 @@
               </div>
               <div class="col-md-4 mb-4">
                   <div class="card product-card">
-                      <img src="http://localhost/siteweb/Files/images.jpeg" class="card-img-top img-fluid" alt="Produit 6">
+                      <img src="images.jpeg" class="card-img-top img-fluid" alt="Produit 6">
                       <div class="card-body">
                           <h5 class="card-title">Produit 6</h5>
                           <p class="card-text">Description du produit 6.</p>
@@ -501,7 +501,7 @@
               </div>
               <div class="col-md-4 mb-4">
                <div class="card product-card">
-                   <img src="http://localhost/siteweb/Files/images (21).jpeg" class="card-img-top img-fluid" alt="Produit 4">
+                   <img src="images (21).jpeg" class="card-img-top img-fluid" alt="Produit 4">
                    <div class="card-body">
                        <h5 class="card-title">Produit 4</h5>
                        <p class="card-text">Description du produit 4.</p>
@@ -511,7 +511,7 @@
            </div>
            <div class="col-md-4 mb-4">
                <div class="card product-card">
-                   <img src="http://localhost/siteweb/Files/images (22).jpeg" class="card-img-top img-fluid" alt="Produit 5">
+                   <img src="images (22).jpeg" class="card-img-top img-fluid" alt="Produit 5">
                    <div class="card-body">
                        <h5 class="card-title">Produit 5</h5>
                        <p class="card-text">Description du produit 5.</p>
@@ -521,7 +521,7 @@
            </div>
            <div class="col-md-4 mb-4">
                <div class="card product-card">
-                   <img src="http://localhost/siteweb/Files/images (23).jpeg" class="card-img-top img-fluid" alt="Produit 6">
+                   <img src="images (23).jpeg" class="card-img-top img-fluid" alt="Produit 6">
                    <div class="card-body">
                        <h5 class="card-title">Produit 6</h5>
                        <p class="card-text">Description du produit 6.</p>
