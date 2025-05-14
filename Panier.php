@@ -120,7 +120,7 @@
   <!-- Header -->
   <nav class="navbar navbar-expand-lg bg-light navbar-light">
     <div class="container">
-        <img src="http://localhost/siteweb/Files/logo.jpg" alt="Logo" style="height: 50px; width: 60px;">
+        <img src="logo.jpg" alt="Logo" style="height: 50px; width: 60px;">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -143,7 +143,7 @@
         <!-- Cart Item 1 -->
         <div class="row cart-item">
           <div class="col-4 col-md-3">
-            <img src="http://localhost/siteweb/Files/images (25).jpeg" alt="Produit 1" class="img-fluid">
+            <img src="images (25).jpeg" alt="Produit 1" class="img-fluid">
           </div>
           <div class="col-8 col-md-6">
             <h5 class="text-dark">Samsung SA</h5>
@@ -165,7 +165,7 @@
         <!-- Cart Item 2 -->
         <div class="row cart-item">
           <div class="col-4 col-md-3">
-            <img src="http://localhost/siteweb/Files/images (24).jpeg" alt="Produit 2" class="img-fluid">
+            <img src="images (24).jpeg" alt="Produit 2" class="img-fluid">
           </div>
           <div class="col-8 col-md-6">
             <h5 class="text-dark">Samsung</h5>
