@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Produit</title>
+  <link href="css/bootstrap.css" rel="stylesheet" >
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <style>
+    /* Background et Texte */
+    body {
+      background-color: white;
+      color: #000000;
+    }
+
+    /* Image principale */
+    .product-image {
+      width: 100%; /* Prend toute la largeur */
+      height: auto; /* Conserve les proportions */
+    }
+
+    /* Vignettes */
+    .thumbnail-image {
+      width: 100px; 
+      height: 80px;
+      object-fit: cover;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: border 0.3s ease;
+    }
+
+    .thumbnail-image.active {
+      border: 2px solid #FFD700; /* Doré pour l'image active */
+    }
+
+    .product-info {
+      padding: 30px 0;
+      color: #000000; /* Texte doré */
+    }
+
+    .product-card {
+      margin-bottom: 20px;
+    }
+
+    .product-card img {
+      width: 100%;
+    }
+
+    .product-color-option {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #FFD700; /* Doré pour les bordures */
+    }
+
+    .product-color-option:hover {
+      border: 2px solid #FFD700;
+    }
+
+    /* Pour les petits écrans */
+    @media (max-width: 768px) {
+      .thumbnail-image {
+        width: 80px; 
+        height: 60px;
+      }
+
+      .product-info {
+        padding: 20px 0;
+      }
+
+      .product-color-option {
+        width: 25px;
+        height: 25px;
+      }
+
+      .product-details {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .product-info .row {
+        flex-direction: column; /* Les images et détails se mettent en colonne sur mobile */
+        text-align: center;
+      }
+    }
+
+    /* Pour les très petits écrans (mobiles très petits) */
+    @media (max-width: 480px) {
+      .product-info h2 {
+        font-size: 1.5rem;
+      }
+
+      .product-info .btn {
+        width: 100%; /* Le bouton occupe toute la largeur sur petits écrans */
+      }
+
+      .product-color-option {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    /* Styles des boutons */
+    .btn-success {
+      background-color: #FFD700; /* Bouton doré */
+      border-color: #FFD700;
+    }
+
+    .btn-success:hover {
+      background-color: #000000; /* Fond noir au survol */
+      color: #FFD700; /* Texte doré au survol */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f0efef;
+      color: #000000;
+    }
+
+    footer a {
+      color: #3a22c2;
+    }
+
+    footer a:hover {
+      color: #000000;
+      background-color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+       <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-light py-1 ">
+        
+      <a class="navbar-brand" href="index.php">
+          <img src="http://localhost/siteweb/Files/logo.jpg" alt="Logo" style="height: 60px; width: 70px; margin-left: 5rem;">
+      </a>
+
+      <!-- <div class="d-flex flex-grow-1 justify-content-center">
+          <form class="d-flex w-100">
+              <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Search">
+              <button style="color: #FFD700" type="submit">Recherche</button>
+          </form>
+      </div> -->
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" style="color: #FFD700;">
+              <li class="nav-item"><a class="nav-link " style="margin-right: 5rem;"   href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="Panier.php" style="margin-right: 5rem;">Panier</a></li>
+          </ul>
+      </div>
+  
+</nav>    
+  <!-- Product Page -->
+  <div class="container product-info">
+    <div class="row">
+      <!-- Product Images and Details -->
+      <div class="col-12 col-md-6">
+        <img src="http://localhost/siteweb/Files/images (26).jpeg" alt="Produit" class="product-image" id="mainImage">
+        <div class="mt-3 d-flex justify-content-start">
+            <img src="http://localhost/siteweb/Files/images (24).jpeg" alt="Image 1" 
+            class="thumbnail-image active" data-image="C:/Users/MAKARATASI/Desktop/siteweb/Files/images (25).jpeg">
+            <img src="http://localhost/siteweb/Files/images (25).jpeg" alt="Image 2" class="thumbnail-image" 
+            data-image="http://localhost/siteweb/Files/images (7).jpeg">
+            <img src="http://localhost/siteweb/Files/images (27).jpeg" alt="Image 3" class="thumbnail-image" 
+            data-image="http://localhost/siteweb/Files/images (1).png">
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="col-12 col-md-6">
+        <h2>Nom du Produit</h2>
+        <p class="text-muted">Référence: #12345</p>
+        <p><strong>Prix:</strong> 99,99</p>
+        <p><strong>Description :</strong> Un confort inégalé pour vos moments de détente. Ce produit allie qualité et élégance, offrant une expérience premium.</p>
+
+        <h5>Couleur :</h5>
+        <div class="d-flex">
+          <div class="product-color-option me-3" style="background-color: #2196F3;" data-bs-toggle="tooltip" data-bs-placement="top" title="Bleu"></div>
+          <div class="product-color-option me-3" style="background-color: #4CAF50;" data-bs-toggle="tooltip" data-bs-placement="top" title="Vert"></div>
+          <div class="product-color-option" style="background-color: #FF5722;" data-bs-toggle="tooltip" data-bs-placement="top" title="Rouge"></div>
+        </div>
+
+        <div class="mt-3">
+            <strong>Choisissez une taille :</strong>
+            <select class="form-select">
+                <option value="S">Blanc</option>
+                <option value="M">Bleu</option>
+                <option value="L">Vert</option>
+                <option value="XL">Beige</option>
+            </select>
+        </div>
+
+        <a href="Panier.php" class="btn btn-success mt-4">Ajouter au panier</a>
+      </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Caractéristiques :</h4>
+        <ul>
+          <li>Dimensions : 30 x 20 x 10 cm</li>
+          <li>Poids : 1,2 kg</li>
+          <li>Matériaux : Acier inoxydable</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>Avis des clients :</h4>
+        <div class="d-flex">
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star-half-alt text-warning"></i>
+          <span class="ms-2">(120 avis)</span>
+        </div>
+        <p class="mt-3">"Un produit vraiment génial. Très satisfait de mon achat !"</p>
+        <p class="text-muted">Jean D.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 mt-5">
+    <div class="container text-center">
+        Copyright © 2025
+        <span class="text-primary"><a href="#">MAYAS/JBN-JBL</a></span> 
+        | Designed by
+        <span class="text-primary"><a href="#">Kadid BHZ</a></span>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.js" ></script>
+
+  <script>
+    // Changer l'image principale lors du clic sur les vignettes
+    document.querySelectorAll('.thumbnail-image').forEach(function(thumb) {
+      thumb.addEventListener('click', function() {
+        document.getElementById('mainImage').src = this.dataset.image;
+        document.querySelectorAll('.thumbnail-image').forEach(function(img) {
+          img.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

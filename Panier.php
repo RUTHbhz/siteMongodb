@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier - Votre Boutique</title>
+  <link href="css/bootstrap.css" rel="stylesheet" >
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      background-color: white; /* Fond noir pour le body */
+      color: #FFD700; /* Texte en or */
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #0a0a0a !important; /* Texte en or dans la navbar */
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #000000 !important; /* Texte noir au survol */
+      background-color: #FFD700 !important; /* Fond or au survol */
+    }
+
+    .cart-item { 
+      border-bottom: 1px solid #FFD700; /* Bordure or */
+      padding: 20px 0; 
+    }
+
+    .cart-item img { 
+      width: 100%; 
+      max-width: 100px; 
+      height: auto; 
+      object-fit: cover; 
+    }
+
+    .total-price { 
+      font-size: 1.5rem; 
+      font-weight: bold; 
+    }
+
+    .remove-btn { 
+      cursor: pointer; 
+      color: #FFD700; /* Texte en or pour le bouton de suppression */
+    }
+
+    .btn-check:checked + .btn-outline-primary {
+      background-color: #FFD700;
+      color: black;
+    }
+
+    .btn-outline-primary {
+      border-color: #000000; /* Bordure or pour les boutons */
+      color:#000000; /* Texte or */
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #000000;
+      color: #FFD700;
+    }
+
+    .btn-primary {
+      background-color: #FFD700;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background-color: #000000;
+      color: #FFD700;
+    }
+
+    /* Pour les petits écrans */
+    @media (max-width: 768px) {
+      .cart-item img { 
+        max-width: 80px; 
+        height: 80px;
+      }
+      .total-price {
+        font-size: 1.2rem;
+      }
+      .cart-item h5 {
+        font-size: 1rem;
+      }
+      .cart-item p {
+        font-size: 0.9rem;
+      }
+      .remove-btn {
+        font-size: 0.9rem;
+      }
+      .btn-outline-primary {
+        padding: 0.3rem 0.6rem;
+      }
+    }
+
+    /* Pour les très petits écrans (smartphones) */
+    @media (max-width: 480px) {
+      .cart-item {
+        padding: 15px 0;
+      }
+      .cart-item h5 {
+        font-size: 0.9rem;
+      }
+      .cart-item p {
+        font-size: 0.8rem;
+      }
+      .total-price {
+        font-size: 1rem;
+      }
+      .remove-btn {
+        font-size: 0.8rem;
+      }
+      .btn-primary {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="container">
+        <img src="http://localhost/siteweb/Files/logo.jpg" alt="Logo" style="height: 50px; width: 60px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Panier -->
+  <div class="container my-5">
+    <!-- <h2 class="text-center text-dark">Votre Panier</h2> -->
+
+    <!-- Cart Items -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Cart Item 1 -->
+        <div class="row cart-item">
+          <div class="col-4 col-md-3">
+            <img src="http://localhost/siteweb/Files/images (25).jpeg" alt="Produit 1" class="img-fluid">
+          </div>
+          <div class="col-8 col-md-6">
+            <h5 class="text-dark">Samsung SA</h5>
+            <p class="text-dark">Un téléphone exceptionnel avec des caractéristiques impressionnantes.</p>
+          </div>
+          <div class="col-12 col-md-3 text-end">
+            <p class="h5">199.99$</p>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-outline-primary me-2" onclick="decreaseQuantity(1)">-</button>
+              <input type="number" class="form-control w-25 text-center" value="1" id="quantity1">
+              <button class="btn btn-outline-primary ms-2" onclick="increaseQuantity(1)">+</button>
+            </div>
+            <div class="text-danger mt-2 remove-btn">
+              <i class="fas fa-trash-alt"></i> Supprimer
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Item 2 -->
+        <div class="row cart-item">
+          <div class="col-4 col-md-3">
+            <img src="http://localhost/siteweb/Files/images (24).jpeg" alt="Produit 2" class="img-fluid">
+          </div>
+          <div class="col-8 col-md-6">
+            <h5 class="text-dark">Samsung</h5>
+            <p class="text-dark">Un téléphone de haute qualité pour satisfaire vos besoins.</p>
+          </div>
+          <div class="col-12 col-md-3 text-end">
+            <p class="h5">129.99$</p>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-outline-primary me-2" onclick="decreaseQuantity(2)">-</button>
+              <input type="number" class="form-control w-25 text-center" value="1" id="quantity2">
+              <button class="btn btn-outline-primary ms-2" onclick="increaseQuantity(2)">+</button>
+            </div>
+            <div class="text-danger mt-2 remove-btn">
+              <i class="fas fa-trash-alt"></i> Supprimer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Price and Checkout Button -->
+    <div class="row mt-4">
+      <div class="col-md-8"></div>
+      <div class="col-12 col-md-4">
+        <div class="border p-3">
+          <h4 class="text-end text-warning">Total: <span class="total-price">329.98$</span></h4>
+          <button class="btn btn-primary w-100 mt-4">Contacte pour passer la commande</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 mt-5">
+    <div class="container text-center">
+        Copyright © 2025
+        <span class="text-primary"><a href="#">MAYAS/JBN-JBL</a></span> 
+        | Designed by
+        <span class="text-primary"><a href="#">Kadid BHZ</a></span>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.js" ></script>
+  <script>
+    function increaseQuantity(item) {
+      var quantity = document.getElementById("quantity" + item).value;
+      quantity++;
+      document.getElementById("quantity" + item).value = quantity;
+      updateTotalPrice();
+    }
+
+    function decreaseQuantity(item) {
+      var quantity = document.getElementById("quantity" + item).value;
+      if (quantity > 1) {
+        quantity--;
+        document.getElementById("quantity" + item).value = quantity;
+        updateTotalPrice();
+      }
+    }
+
+    function updateTotalPrice() {
+      var price1 = 199.99;
+      var price2 = 129.99;
+      var quantity1 = document.getElementById("quantity1").value;
+      var quantity2 = document.getElementById("quantity2").value;
+      var total = (price1 * quantity1) + (price2 * quantity2);
+      document.querySelector(".total-price").innerText = "$" + total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
