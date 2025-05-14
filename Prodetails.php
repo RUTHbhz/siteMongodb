@@ -133,7 +133,7 @@
     <nav class="navbar navbar-expand-lg bg-light py-1 ">
         
       <a class="navbar-brand" href="index.php">
-          <img src="http://localhost/siteweb/Files/logo.jpg" alt="Logo" style="height: 60px; width: 70px; margin-left: 5rem;">
+          <img src="logo.jpg" alt="Logo" style="height: 60px; width: 70px; margin-left: 5rem;">
       </a>
 
       <!-- <div class="d-flex flex-grow-1 justify-content-center">
@@ -160,14 +160,14 @@
     <div class="row">
       <!-- Product Images and Details -->
       <div class="col-12 col-md-6">
-        <img src="http://localhost/siteweb/Files/images (26).jpeg" alt="Produit" class="product-image" id="mainImage">
+        <img src="images (26).jpeg" alt="Produit" class="product-image" id="mainImage">
         <div class="mt-3 d-flex justify-content-start">
-            <img src="http://localhost/siteweb/Files/images (24).jpeg" alt="Image 1" 
+            <img src="images (24).jpeg" alt="Image 1" 
             class="thumbnail-image active" data-image="C:/Users/MAKARATASI/Desktop/siteweb/Files/images (25).jpeg">
-            <img src="http://localhost/siteweb/Files/images (25).jpeg" alt="Image 2" class="thumbnail-image" 
-            data-image="http://localhost/siteweb/Files/images (7).jpeg">
-            <img src="http://localhost/siteweb/Files/images (27).jpeg" alt="Image 3" class="thumbnail-image" 
-            data-image="http://localhost/siteweb/Files/images (1).png">
+            <img src="images (25).jpeg" alt="Image 2" class="thumbnail-image" 
+            data-image="images (7).jpeg">
+            <img src="images (27).jpeg" alt="Image 3" class="thumbnail-image" 
+            data-image="images (1).png">
         </div>
       </div>
 
